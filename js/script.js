@@ -32,3 +32,9 @@ const letterFrequency = (phrase) => {
 }
 
 // console.log(letterFrequency('lol, what are you doing later tonight lol, haha!'))
+
+// wordFrequency('lol what lol') 👉 {'lol': 2, 'what': 1}
+const wordFrequency = (phrase) => {
+  const words = phrase.split(' ')
+  return letterFrequency(words)
+}
