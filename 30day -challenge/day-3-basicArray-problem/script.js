@@ -40,3 +40,34 @@ const myFunction2 = (array, n) => {
 console.log(myFunction2(myArray, 3))
 
 //solution 3
+const qsNum3 = [1,2,3,4,5]
+const qsNum3arr = [3,4,5,6]
+const myFunction3 = (...arrays) =>{
+    return arrays.flat()
+    //return arrays.reduce((a,b)=> a.concat(b))
+}
+console.log(myFunction3(qsNum3, qsNum3arr))
+
+//solution 4
+
+const problem4Array = [{a:1,b:7},{a:2,b:1}]
+
+const myFunction4 =(array)=>{
+    const sort = (a,b) => a.x - b.x
+    return array.sort(sort)
+}
+console.log(myFunction4(problem4Array))
+
+//solution 5
+const problem4Array5 = [-10, 22, 333, 42]
+const problem4Array5array = [-11, 5, 22, 41, 42]
+
+const myFunction5 =(a,b)=>{
+    // const mergeAndremoveDuplicateEl = array.flat()
+    // const sorting =  mergeAndremoveDuplicateEl.sort((a,b) => a-b)
+    // return new Set(sorting)
+    const mergearray = a.concat(b)
+     const result =  [...new Set(mergearray)]
+    return result.sort((a,b) => a-b)
+    }
+console.log(myFunction5(problem4Array5, problem4Array5array));
